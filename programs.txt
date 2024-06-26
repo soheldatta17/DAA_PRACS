@@ -1,0 +1,7 @@
+1. quick sort
+2. fractional knapsack
+3. merge sort
+4. matrix chain
+5. graph coloring
+6. n-queens
+7. job sequencing
