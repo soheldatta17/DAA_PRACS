@@ -15,24 +15,24 @@ void sort_Descending(int n, float *weight, float *profit, float *ratio)
 
     for (i = 0; i < n - 1; i++)
     {
-        for (j = i + 1; j < n; j++)
+        for (j = 0; j < n-1-i; j++)
         {
-            if (ratio[i] < ratio[j])
+            if (ratio[j] < ratio[j+1])
             {
                 // Swap ratios
                 temp = ratio[j];
-                ratio[j] = ratio[i];
-                ratio[i] = temp;
+                ratio[j] = ratio[j+1];
+                ratio[j+1] = temp;
 
                 // Swap weights
                 temp = weight[j];
-                weight[j] = weight[i];
-                weight[i] = temp;
+                weight[j] = weight[j+1];
+                weight[j+1] = temp;
 
                 // Swap profits
                 temp = profit[j];
-                profit[j] = profit[i];
-                profit[i] = temp;
+                profit[j] = profit[j+1];
+                profit[j+1] = temp;
             }
         }
     }
