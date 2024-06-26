@@ -1,7 +1,6 @@
 #include <stdio.h>
 
 float t_profit = 0;
-float x[50];
 
 void display(int n)
 {
