@@ -1,8 +1,6 @@
 #include <stdio.h>
 #include <string.h>
 
-#define MAX 100
-
 typedef struct Job {
     char id[5];
     int deadline;
@@ -100,10 +98,11 @@ void jobSequencingWithDeadline(Job jobs[], int n) {
 
 int main(void) {
     int i, n;
-    Job jobs[MAX];
+    
 
     printf("\nEnter the number of jobs: ");
     scanf("%d", &n);
+    Job jobs[n];
 
     printf("\nEnter the job id, deadline, and profit for each job:\n");
     for (i = 0; i < n; i++) {
