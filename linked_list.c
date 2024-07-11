@@ -42,5 +42,6 @@ void main()
     {
         createNode(i);
     }
+    printf("\nThe nodes are :\n");
     displayNode(i);
 }
