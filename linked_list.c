@@ -1,44 +1,43 @@
-#include<stdio.h>
-#include<stdlib.h>
+#include <stdio.h>
+#include <stdlib.h>
 struct Node
 {
     struct Node *next;
     int data;
-}*head,*current;
+} *head, *current;
 void displayNode()
 {
-    struct Node *temp=head;
-    while (temp!=NULL)
+    struct Node *temp = head;
+    while (temp != NULL)
     {
-        printf("\n%d",temp->data);
-        temp=temp->next;
+        printf("\n%d", temp->data);
+        temp = temp->next;
     }
-    
 }
 void createNode(int n)
 {
     struct Node *newnode = (struct Node *)malloc(sizeof(struct Node));
-    newnode->data=n;
-    if(head==NULL)
+    newnode->data = n;
+    if (head == NULL)
     {
-        head=newnode;
+        head = newnode;
         head->next = NULL;
-        current=head;
+        current = head;
     }
     else
     {
-        current->next=newnode;
-        current->next->next=NULL;
-        current=newnode;
+        current->next = newnode;
+        current->next->next = NULL;
+        current = newnode;
     }
 }
 void main()
 {
-    int n,i;
+    int n, i;
     printf("Enter the number of Nodes: ");
-    scanf("%d",&n);
+    scanf("%d", &n);
     printf("\n");
-    for(i=0;i<n;i++)
+    for (i = 0; i < n; i++)
     {
         createNode(i);
     }
