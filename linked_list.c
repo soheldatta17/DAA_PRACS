@@ -33,14 +33,29 @@ void createNode(int n)
 }
 void main()
 {
-    int n, i;
-    printf("Enter the number of Nodes: ");
-    scanf("%d", &n);
+    int ch, n, i;
     printf("\n");
-    for (i = 0; i < n; i++)
+    printf("Enter your choice:\n 1) Enter 1 to add a new node\n 2) Enter 2 to display all the nodes\n 3) Enter 3 to Quit\n");
+    scanf("%d", &ch);
+    switch (ch)
     {
-        createNode(i);
+    case 1:
+        printf("Enter the value: ");
+        scanf("%d", &n);
+        createNode(n);
+        printf("\n");
+        main();
+        break;
+    case 2:
+        printf("The nodes are: \n");
+        displayNode();
+        printf("\n");
+        main();
+        break;
+    case 3:
+        break;
+    default:
+        printf("Wrong Choice");
+        main();
     }
-    printf("\nThe nodes are :\n");
-    displayNode(i);
 }
